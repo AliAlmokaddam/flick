@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
 
 @Component({
     templateUrl: './formlayoutdemo.component.html'
@@ -8,11 +9,11 @@ export class FormLayoutDemoComponent {
     selectedState: any = null;
 
     states: any[] = [
-        {name: 'Arizona', code: 'Arizona'},
-        {name: 'California', value: 'California'},
-        {name: 'Florida', code: 'Florida'},
-        {name: 'Ohio', code: 'Ohio'},
-        {name: 'Washington', code: 'Washington'}
+        { name: 'Arizona', code: 'Arizona' },
+        { name: 'California', value: 'California' },
+        { name: 'Florida', code: 'Florida' },
+        { name: 'Ohio', code: 'Ohio' },
+        { name: 'Washington', code: 'Washington' }
     ];
 
     dropdownItems = [
@@ -29,4 +30,13 @@ export class FormLayoutDemoComponent {
 
     city2: any = null;
 
+    requesterFormControl = new FormControl('', [Validators.required, Validators.email]);
+    subjectFormControl = new FormControl('', Validators.required);
+    descriptionFormControl=new FormControl('',Validators.required);
+    onSubmit(){
+        
+    window.location.href="http://localhost:4200/#/uikit/floatlabel";
+    }
 }
+
+

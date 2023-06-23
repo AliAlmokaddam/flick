@@ -4,6 +4,7 @@ import { MessageService } from 'primeng/api';
 import { Table } from 'primeng/table';
 import { ProductService } from 'src/app/demo/service/product.service';
 
+
 @Component({
     templateUrl: './crud.component.html',
     providers: [MessageService]
@@ -53,7 +54,8 @@ export class CrudComponent implements OnInit {
     openNew() {
         this.product = {};
         this.submitted = false;
-        this.productDialog = true;
+        // this.productDialog = true;
+        window.location.href = "http://localhost:4200/#/uikit/formlayout";
     }
 
     deleteSelectedProducts() {

@@ -1,11 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { CountryService } from 'src/app/demo/service/country.service';
-
+import { DataService } from './data.service';
 @Component({
     templateUrl: './floatlabeldemo.component.html',
+//     template:`
+//     <div *ngFor="let item of data">
+//       <h3>{{ item.title }}</h3>
+//       <p>{{ item.content }}</p>
+//       <p>{{ item.name }}</p>
+//       <p>{{ item.section }}</p>
+//     </div>
+//   `
 })
 export class FloatLabelDemoComponent implements OnInit {
-
+    data: any[] = [];
     countries: any[] = [];
 
     cities: any[];
@@ -36,7 +44,7 @@ export class FloatLabelDemoComponent implements OnInit {
 
     value12: any;
 
-    constructor(private countryService: CountryService) {
+    constructor(private countryService: CountryService,private dataService: DataService) {
         this.cities = [
             {name: 'New York', code: 'NY'},
             {name: 'Rome', code: 'RM'},
@@ -47,9 +55,10 @@ export class FloatLabelDemoComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.countryService.getCountries().then(countries => {
-            this.countries = countries;
-        });
+        this.dataService.getData().subscribe((response) => {
+      this.data = response;
+      
+    });
     }
 
     searchCountry(event: any) {

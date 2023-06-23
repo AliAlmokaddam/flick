@@ -1,107 +1,171 @@
 <div class="grid">
-	<div class="col-12 md:col-6">
-		<div class="card p-fluid">
-			<h5>Vertical</h5>
-			<div class="field">
-				<label htmlFor="name1">Name</label>
-				<input pInputText id="name1" type="text" />
-			</div>
-			<div class="field">
-				<label htmlFor="email1">Email</label>
-				<input pInputText id="email1" type="text" />
-			</div>
-			<div class="field">
-				<label htmlFor="age1">Age</label>
-				<input pInputText id="age1" type="text" />
-			</div>
-		</div>
-		
-		<div class="card p-fluid">
-			<h5>Vertical Grid</h5>
-			<div class="p-formgrid grid">
-				<div class="field col">
-					<label htmlFor="name2">Name</label>
-					<input pInputText id="name2" type="text" />
-				</div>
-				<div class="field col">
-					<label htmlFor="email2">Email</label>
-					<input pInputText id="email2" type="text" />
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="col-12 md:col-6">
-		<div class="card p-fluid">
-			<h5>Horizontal</h5>
-			<div class="field grid">
-				<label htmlFor="name3" class="col-12 mb-2 md:col-2 md:mb-0">Name</label>
-				<div class="col-12 md:col-10">
-					<input pInputText id="name3" type="text" />
-				</div>
-			</div>
-			<div class="field grid">
-				<label htmlFor="email3" class="col-12 mb-2 md:col-2 md:mb-0">Email</label>
-				<div class="col-12 md:col-10">
-					<input pInputText id="email3" type="text" />
-				</div>
-			</div>
-		</div>
-
-		<div class="card">
-			<h5>Inline</h5>
-			<div class="formgroup-inline">
-				<div class="field">
-					<label htmlFor="firstname1" class="p-sr-only">Firstname</label>
-					<input pInputText id="firstname1" type="text" placeholder="Firstname" />
-				</div>
-				<div class="field">
-					<label htmlFor="lastname1" class="p-sr-only">Lastname</label>
-					<input pInputText id="lastname1" type="text" placeholder="Lastname" />
-				</div>
-				<button pButton label="Submit"></button>
-			</div>
-		</div>
-
-		<div class="card">
-			<h5>Help Text</h5>
-			<div class="field p-fluid">
-				<label htmlFor="username">Username</label>
-				<input pInputText id="username" type="text" />
-				<small>Enter your username to reset your password.</small>
-			</div>
-		</div>
-	</div>
-
 	<div class="col-12">
-		<div class="card">
-			<h5>Advanced</h5>
-			<div class="p-fluid p-formgrid grid">
-				<div class="field col-12 md:col-6">
-					<label htmlFor="firstname2">Firstname</label>
-					<input pInputText id="firstname2" type="text" />
-				</div>
-				<div class="field col-12 md:col-6">
-					<label htmlFor="lastname2">Lastname</label>
-					<input pInputText id="lastname2" type="text" />
-				</div>
-				<div class="field col-12">
-					<label htmlFor="address">Address</label>
-					<input pInputTextarea id="address" rows="4" />
-				</div>
-				<div class="field col-12 md:col-6">
-					<label htmlFor="city">City</label>
-					<input pInputText id="city" type="text" />
-				</div>
-				<div class="field col-12 md:col-3">
-					<label htmlFor="state">State</label>
-					<p-dropdown [options]="dropdownItems" optionLabel="name" [(ngModel)]="selectedState"></p-dropdown>
-				</div>
-				<div class="field col-12 md:col-3">
-					<label htmlFor="zip">Zip</label>
-					<input pInputText id="zip" type="text" />
-				</div>
+		<div [style]="{ width: '851px' }">
+			<h3 [style]="{
+				'color':'#35353A','font-size':'26px','font-family':'Poppins','font-weight':'700'}">Create new ticket</h3>
+				<h4 [style]="{
+					'color': '#777777',
+					'font-size': '16px',
+					'font-family': 'Poppins',
+					'font-weight': '500',
+					'margin-top': '10px',
+					'margin-bottom': '20px'
+				  }">Report an issue</h4>
+			<div>
+				<label>Requester</label>
+				<input [style]="{
+					'display': 'flex',
+					'height': '40px',
+					'padding': '8px 0px',
+     				'align-items': 'center',
+					'flex-shrink': '0',
+					'align-self': 'stretch',
+					'border-radius': '4px',
+					'border':' 1px solid #98A2B3',
+					
+				  }" pInputText type="email" [formControl]="requesterFormControl">
+
+			</div>
+			<div class="field">
+				<label>Subject</label>
+				<input [style]="{
+					'display': 'flex',
+					'height': '40px',
+					'padding': '8px 0px',
+     				'align-items': 'center',
+					'flex-shrink': '0',
+					'align-self': 'stretch',
+					'border-radius': '4px',
+					'border':' 1px solid #98A2B3',
+					
+				  }" pInputText type="email" [formControl]="subjectFormControl">
+
+			</div>
+			<div class="field">
+				<label>Urgency</label>
+				<p-dropdown [style]="{
+					
+					'height': '40px',
+					'padding': '0px 0px 4px 8px',
+     				'align-items': 'center',
+					'flex-shrink': '0',
+					'align-self': 'stretch',
+				  }"></p-dropdown>
+			</div>
+			<div class="field">
+				<label>Category</label>
+				<p-dropdown [style]="{
+					'display': 'center',
+					'height': '40px',
+					'padding': '8px 0px',
+     				'align-items': 'center',
+					'flex-shrink': '0',
+					'align-self': 'stretch',
+				  }" id="email1" type="text"></p-dropdown>
+			</div>
+			<div class="field">
+				<label>Description</label>
+				<textarea [style]="{
+					'display': 'flex',
+					'width': '755px',
+					'height': '265px',
+					'padding': '30px',
+					'flex-direction': 'column',
+					'align-items': 'center',
+					'gap': '88px',
+					'flex-shrink': '0',
+					'border-radius': '10px',
+					'border': '1px solid #98A2B3'
+				  }" rows="5" cols="30" [formControl]="descriptionFormControl" pInputTextarea
+					placeholder="Write your issue description"></textarea>
+			</div>
+			<span>
+				<i class="pi pi-paperclip"></i>
+				<label [style]="{
+					'color': '#F57C00',
+					'font-size': '16px',
+					'font-family':' Poppins',
+					'font-weight': '500'
+				}">Upload Attachment</label>
+			</span>
+			<div style="float: right;">
+				<p-button label="Cancel" [style]="{
+      'width':'100px','height':'41px',
+      'flex-shrink':'0','color':'#F57C00',
+      'border-radius':' 4px',
+      'border': '1px solid #F57C00',
+	  'font-size':'14px',
+		'font-family':'Poppins',
+		'font-weight':'500',
+    }"></p-button>
+				<p-button label="Submit" [style]="{
+		'width':'100px','height':'41px',
+		'flex-shrink':'0','color':'#ECECEC',
+		'border-radius':' 4px',
+		'background':'#F57C00',
+		'font-size':'16px',
+		'font-family':'Poppins',
+		'font-weight':'500',
+		'margin-left': '20px'
+	  }" (click)="onSubmit()"></p-button>
+
 			</div>
 		</div>
 	</div>
 </div>
+<!-- <div class="w-[829px] h-[719px] px-[50px] py-10 bg-white rounded-lg shadow flex-col justify-start items-center gap-[5px] inline-flex">
+	<div class="self-stretch h-[123px] p-[0px] justify-start items-start gap-[27px] inline-flex">
+	  <div class="w-[30px] h-[30px] p-[0px] justify-center items-center flex">
+		<div class="w-8 h-8 relative">
+		  <div class="w-8 h-8 left-[0px] top-[0px] absolute bg-red-300 rounded-full"></div>
+		  <div class="left-[11.94px] top-[3.51px] absolute text-neutral-700 text-[16px] font-normal">J</div>
+		</div>
+	  </div>
+	  <div class="grow shrink basis-0 h-[106px] p-[0px] flex-col justify-start items-start gap-[10px] inline-flex">
+		<div class="self-stretch p-[0px] justify-start items-center gap-4 inline-flex">
+		  <div class="text-neutral-700 text-[12px] font-medium leading-none">Jehan Toukan</div>
+		  <div class="text-neutral-400 text-[12px] font-normal leading-none">Today, 11:30 PM</div>
+		</div>
+		<div class="self-stretch h-20 relative">
+		  <div class="w-[672px] h-20 left-[0px] top-[0px] absolute bg-white rounded-tr-lg rounded-bl-lg rounded-br-lg shadow"></div>
+		  <div class="w-[612.21px] left-[29.89px] top-[20px] absolute text-neutral-700 text-[14px] font-normal leading-tight">Constantly-updated list of well designed invoices from the always-fresh Muzli inventory, to inspire you in your print, or digital design process.</div>
+		</div>
+	  </div>
+	</div>
+	<div class="self-stretch grow shrink basis-0 p-[0px] flex-col justify-start items-end gap-[5px] flex">
+	  <div class="self-stretch h-[123px] p-[0px] justify-start items-start gap-[27px] inline-flex">
+		<div class="w-[30px] h-[30px] p-[0px] justify-center items-center flex">
+		  <img class="w-8 h-8 rounded-full" src="https://via.placeholder.com/32x32" />
+		</div>
+		<div class="grow shrink basis-0 h-[106px] p-[0px] flex-col justify-start items-start gap-[10px] inline-flex">
+		  <div class="self-stretch p-[0px] justify-start items-center gap-4 inline-flex">
+			<div class="text-neutral-700 text-[12px] font-medium leading-none">Technical support</div>
+			<div class="text-neutral-400 text-[12px] font-normal leading-none">Today, 11:30 PM</div>
+		  </div>
+		  <div class="self-stretch h-20 relative">
+			<div class="w-[672px] h-20 left-[0px] top-[0px] absolute bg-orange-50 rounded-tr-lg rounded-bl-lg rounded-br-lg shadow"></div>
+			<div class="w-[612.21px] left-[29.89px] top-[20px] absolute text-neutral-700 text-[14px] font-normal leading-tight">Constantly-updated list of well designed invoices from the always-fresh Muzli inventory, to inspire you in your print, or digital design process.</div>
+		  </div>
+		</div>
+	  </div>
+	  <div class="w-[729px] h-[337px] p-[0px] justify-start items-start gap-[27px] inline-flex">
+		<div class="w-[30px] h-[30px] p-[0px] justify-center items-center flex">
+		  <div class="w-8 h-8 relative">
+			<div class="w-8 h-8 left-[0px] top-[0px] absolute bg-red-300 rounded-full"></div>
+			<div class="left-[11.94px] top-[3.51px] absolute text-neutral-700 text-[16px] font-normal">J</div>
+		  </div>
+		</div>
+		<div class="grow shrink basis-0 h-[106px] p-[0px] flex-col justify-start items-start gap-[10px] inline-flex">
+		  <div class="self-stretch p-[0px] justify-start items-center gap-4 inline-flex">
+			<div class="text-neutral-700 text-[12px] font-medium leading-none">Jehan Toukan</div>
+			<div class="text-neutral-400 text-[12px] font-normal leading-none">Today, 11:30 PM</div>
+		  </div>
+		  <div class="self-stretch h-[311px] relative">
+			<div class="w-[672px] h-[311px] left-[0px] top-[0px] absolute bg-white rounded-tr-lg rounded-bl-lg rounded-br-lg shadow"></div>
+			<img class="w-[276px] h-[200px] left-[30px] top-[83px] absolute" src="https://via.placeholder.com/276x200" />
+			<div class="w-[612.21px] left-[29.89px] top-[20px] absolute text-neutral-700 text-[14px] font-normal leading-tight">Constantly-updated list of well designed invoices from the always-fresh Muzli inventory, to inspire you in your print, or digital design process.</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </div> -->

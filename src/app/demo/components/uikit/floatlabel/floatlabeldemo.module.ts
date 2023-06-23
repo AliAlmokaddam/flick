@@ -13,6 +13,8 @@ import { CascadeSelectModule } from "primeng/cascadeselect";
 import { MultiSelectModule } from "primeng/multiselect";
 import { InputTextareaModule } from "primeng/inputtextarea";
 import { InputTextModule } from "primeng/inputtext";
+import { CardModule } from 'primeng/card';
+
 
 @NgModule({
 	imports: [
@@ -28,7 +30,8 @@ import { InputTextModule } from "primeng/inputtext";
 		CascadeSelectModule,
 		MultiSelectModule,
 		InputTextareaModule,
-		InputTextModule
+		InputTextModule,
+		CardModule
 	],
 	declarations: [FloatLabelDemoComponent]
 })

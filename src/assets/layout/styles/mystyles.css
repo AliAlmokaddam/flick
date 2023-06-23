@@ -1,0 +1,44 @@
+/************* Setup *************/
+:root, p,
+h1, h2, h3, h4, h5, h6 {
+    /* Font */
+    font-family: 'Poppins', sans-serif !important;
+}
+
+/************* Card Button *************/
+div.p-card-footer .p-button,
+div.p-card-footer .p-button:hover,
+div.p-card-footer .p-button:enabled:hover {
+    background: none;
+    border: none;
+    border-radius: 0%;
+    border-left: 2px solid #BEBEBE;
+    border-right: 2px solid #BEBEBE;
+    line-height: 8.5px;
+    font-size: 16px;
+}
+
+/* Set height of card footer */
+div.p-card-footer div.ng-star-inserted {
+    height: 15.5px;
+}
+
+/* Remove Border & Background Color of Header */
+.p-toolbar {
+    background: none;
+    border: none;
+}
+
+/************* Button *************/
+div.my-2 {
+    border-radius: 4px;
+    background: #F57C00;
+}
+
+div.layout-sidebar {
+    height: calc(100vh - 5rem);
+    top: 5rem;
+    left: 0rem;
+    border-radius: 0;
+    overflow-y: hidden;
+}

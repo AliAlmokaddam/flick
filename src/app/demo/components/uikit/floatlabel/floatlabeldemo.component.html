@@ -1,4 +1,313 @@
-<div class="card">
+<div class="grid">
+    <div class="col-12">
+        <div [style]="{ width: '851px' }">
+            <h3 [style]="{
+				'color':'#35353A','font-size':'26px','font-family':'Poppins','font-weight':'700'}">Tickets</h3>
+        </div>
+        <div style="display: flex;flex-direction: column; justify-content: space-between; width: 851px; height: 12px;">
+            <p-card *ngFor="let item of data" [style]="{
+                'font-size': '20px',
+                'font-family': 'Inter',
+                'font-weight': '500',
+                'color': 'var(--gray-900, #202020)',
+                'line-height': '28px',
+                'box-shadow': '0px 4px 8px 0px rgba(0, 0, 0, 0.10)',
+                'margin-bottom': '12px'
+              }">
+                <header style="display: flex; justify-content: space-between;">
+                    <h2 [style]="{
+                        'font-size': '20px',
+                        'font-family': 'Inter',
+                        'font-weight': '500',
+                        'color': ' var(--gray-900, #202020)',
+                        'line-height': '28px',
+                        
+                      }">{{item.title}}</h2>
+                    <p [style]="{
+                    'font-size': '16px',
+                    'font-family': 'Inter',
+                    'font-weight': '500',
+                    'color': ' var(--gray-900, #202020)',
+                    'line-height': '24px',
+                    
+                  }">{{item.date}}</p>
+                </header>
+                <p [style]="{
+                  'font-size': '14px',
+                  'font-family': 'Inter',
+                  'width': '727px',
+                  'color': 'var(--gray-900, #202020)',
+                  'line-height': '20px',
+                  'flex-direction': 'column',
+                  'display': 'flex',
+                  'gap': '10px',
+                  'flex': '1 0 0',
+                  'align-self': 'stretch',
+                }">
+                    Life seasons open have. Air have of. Lights fill after let third darkness replenish have of.
+                    Lights fill af....
+                </p>
+                <ng-template pTemplate="footer">
+                    <div [style]="{
+                    'display':'flex','align-self':'stretch','padding':'10px','align-items':'center','flex':'1 0 0','gap':'16px'
+                }">
+                        <p-button [label]="item.tag4" [style]="{
+                    'font-size':'16px','font-family':'Poppins','font-weight':'500','color':item.color4,
+                    'background-color':item.bgcolor4
+                    
+                }"></p-button>
+                <!-- <p-button [label]="item.section" [style]="{
+                    'font-size':'16px','font-family':'Poppins','font-weight':'500','color':item.color4,
+                    'background-color':item.bgcolor4
+                    
+                }"></p-button> -->
+                  
+
+                        <p-button [label]="item.tag1" [style]="{
+                   'color':item.color1,
+                    'font-size':'14px','font-family':'Poppins','font-weight':'500',
+                    'background':item.bgcolor1
+                }"></p-button>
+                <p-button [label]="item.tag5" 
+                            [style]="{
+                    'border-radius':'50px' ,'border':'1px solid #72CA6B',
+                    'color':item.color5,
+                    'background':item.bgcolor5,
+                    'font-size':'14px','font-family':'Inter','font-weight':'500','line-height':'16px',
+                    'display':'flex','width':'62px','height':'23px','justify-content':'center','padding':'2px 8px','align-items':'center','gap':'4px'}">
+                        </p-button>
+                        <p-button [label]="item.tag6"
+                            [style]="{
+                    'border-radius':'50px' ,'border':'1px solid #B06F40',
+                    'color':item.color6,
+                    'background':item.bgcolor6,
+                    'font-size':'14px','font-family':'Inter','font-weight':'500','line-height':'16px',
+                    'display':'flex','width':'62px','height':'23px','justify-content':'center','padding':'2px 8px','align-items':'center','gap':'4px'}">
+                        </p-button>
+                        <p-button [label]="item.tag3" 
+                            [style]="{
+                    'border-radius':'50px' ,'border':'1px solid #93A1EB',
+                    'background':item.bgcolor3,
+                    'color':item.color3,
+                    'font-size':'14px','font-family':'Inter','font-weight':'500','line-height':'16px',
+                    'display':'flex','width':'62px','height':'23px','justify-content':'center','padding':'2px 8px','align-items':'center','gap':'4px'}">
+                        </p-button>
+                        <!-- <p-button [label]="item.tag4" [ngStyle]="{'background':item.color4}" [style]="{'border-radius':'50px' ,'border':'1px solid #93A1EB',
+                    'color':'#576EE7',
+                    'font-size':'14px','font-family':'Inter','font-weight':'500','line-height':'16px',
+                    'display':'flex','height':'23px','padding':'2px 8px','align-items':'center','gap':'4px'
+                }"></p-button> -->
+                    </div>
+
+                </ng-template>
+            </p-card>
+            <!-- <p-card [style]="{
+                'font-size': '20px',
+                'font-family': 'Inter',
+                'font-weight': '500',
+                'color': 'var(--gray-900, #202020)',
+                'line-height': '28px',
+                'box-shadow': '0px 4px 8px 0px rgba(0, 0, 0, 0.10)',
+                'margin-bottom': '12px'
+              }">
+                <header style="display: flex; justify-content: space-between;">
+                    <h2 [style]="{
+                        'font-size': '20px',
+                        'font-family': 'Inter',
+                        'font-weight': '500',
+                        'color': ' var(--gray-900, #202020)',
+                        'line-height': '28px',
+                        
+                      }">Issu with finding task</h2>
+                    <p [style]="{
+                    'font-size': '16px',
+                    'font-family': 'Inter',
+                    'font-weight': '500',
+                    'color': ' var(--gray-900, #202020)',
+                    'line-height': '24px',
+                    
+                  }">10.Ma.2023</p>
+                </header>
+                <p [style]="{
+                  'font-size': '14px',
+                  'font-family': 'Inter',
+                  'width': '727px',
+                  'color': 'var(--gray-900, #202020)',
+                  'line-height': '20px',
+                  'flex-direction': 'column',
+                  'display': 'flex',
+                  'gap': '10px',
+                  'flex': '1 0 0',
+                  'align-self': 'stretch',
+                  
+                }">
+                    Life seasons open have. Air have of. Lights fill after let third darkness replenish have of.
+                    Lights fill af....
+                </p>
+                <ng-template pTemplate="footer">
+                    <div [style]="{
+                    'display':'flex','align-self':'stretch','padding':'10px','align-items':'center','flex':'1 0 0','gap':'16px'
+                }">
+                        <p-button label="Hardware" [style]="{
+                    'font-size':'16px','font-family':'Poppins','font-weight':'500','color':'#35353A',
+                    'background':' #00000'
+                }"></p-button>
+                        <p-button label="Open" [style]="{'border-radius':'50px' ,'border':'1px solid #72CA6B',
+                    'background':' #F7FFF6','color':'#72CA6B',
+                    'font-size':'14px','font-family':'Inter','font-weight':'500','line-height':'16px',
+                    'display':'flex','height':'23px','padding':'2px 8px','align-items':'center','gap':'4px'
+                }"></p-button>
+                        <p-button label="#EE234" [style]="{'border-radius':'50px' ,'border':'1px solid #93A1EB',
+                    'background':' #DEE4FF','color':'#576EE7',
+                    'font-size':'14px','font-family':'Inter','font-weight':'500','line-height':'16px',
+                    'display':'flex','height':'23px','padding':'2px 8px','align-items':'center','gap':'4px'
+                }"></p-button>
+                    </div>
+                    
+                </ng-template>
+            </p-card>
+            <p-card [style]="{
+                'font-size': '20px',
+                'font-family': 'Inter',
+                'font-weight': '500',
+                'color': 'var(--gray-900, #202020)',
+                'line-height': '28px',
+                'box-shadow': '0px 4px 8px 0px rgba(0, 0, 0, 0.10)',
+                'margin-bottom': '12px'
+              }">
+                <header style="display: flex; justify-content: space-between;">
+                    <h2 [style]="{
+                        'font-size': '20px',
+                        'font-family': 'Inter',
+                        'font-weight': '500',
+                        'color': ' var(--gray-900, #202020)',
+                        'line-height': '28px',
+                        
+                      }">Issu with finding task</h2>
+                    <p [style]="{
+                    'font-size': '16px',
+                    'font-family': 'Inter',
+                    'font-weight': '500',
+                    'color': ' var(--gray-900, #202020)',
+                    'line-height': '24px',
+                    
+                  }">10.Ma.2023</p>
+                </header>
+                <p [style]="{
+                  'font-size': '14px',
+                  'font-family': 'Inter',
+                  'width': '727px',
+                  'color': 'var(--gray-900, #202020)',
+                  'line-height': '20px',
+                  'flex-direction': 'column',
+                  'display': 'flex',
+                  'gap': '10px',
+                  'flex': '1 0 0',
+                  'align-self': 'stretch',
+                  
+                }">
+                    Life seasons open have. Air have of. Lights fill after let third darkness replenish have of.
+                    Lights fill af....
+                </p>
+                <ng-template pTemplate="footer">
+                    <div [style]="{
+                    'display':'flex','align-self':'stretch','padding':'10px','align-items':'center','flex':'1 0 0','gap':'16px'
+                }">
+                        <p-button label="closed" [style]="{
+                            'border-radius':'50px' ,'border':'1px solid #949494',
+                            'background':' #ECECEC','color':'#000',
+                            'font-size':'14px','font-family':'Inter','font-weight':'500','line-height':'16px',
+                            'display':'flex','height':'23px','padding':'2px 8px','align-items':'center','gap':'4px'
+                }"></p-button>
+                        <p-button label="Urgent" [style]="{'border-radius':'50px' ,'border':'1px solid  var(--danger-border, #E2A1A1)',
+                    'background':'var(--danger-second, #F9F2F2)','color':'var(--danger-main, #BA1717)',
+                    'font-size':'14px','font-family':'Inter','font-weight':'500','line-height':'16px',
+                    'display':'flex','height':'23px','padding':'2px 8px','align-items':'center','gap':'4px'
+                }"></p-button>
+                        <p-button label="#EE234" [style]="{'border-radius':'50px' ,'border':'1px solid #93A1EB',
+                    'background':' #DEE4FF','color':'#576EE7',
+                    'font-size':'14px','font-family':'Inter','font-weight':'500','line-height':'16px',
+                    'display':'flex','height':'23px','padding':'2px 8px','align-items':'center','gap':'4px'
+                }"></p-button>
+                    </div>
+                    
+                </ng-template>
+            </p-card>
+            <p-card [style]="{
+                'font-size': '20px',
+                'font-family': 'Inter',
+                'font-weight': '500',
+                'color': 'var(--gray-900, #202020)',
+                'line-height': '28px',
+                'box-shadow': '0px 4px 8px 0px rgba(0, 0, 0, 0.10)',
+                'margin-bottom': '12px'
+              }">
+                <header style="display: flex; justify-content: space-between;">
+                    <h2 [style]="{
+                        'font-size': '20px',
+                        'font-family': 'Inter',
+                        'font-weight': '500',
+                        'color': ' var(--gray-900, #202020)',
+                        'line-height': '28px',
+                        
+                      }">Issu with finding task</h2>
+                    <p [style]="{
+                    'font-size': '16px',
+                    'font-family': 'Inter',
+                    'font-weight': '500',
+                    'color': ' var(--gray-900, #202020)',
+                    'line-height': '24px',
+                    
+                  }">20.Oct.2023</p>
+                </header>
+                <p [style]="{
+                  'font-size': '14px',
+                  'font-family': 'Inter',
+                  'width': '727px',
+                  'color': 'var(--gray-900, #202020)',
+                  'line-height': '20px',
+                  'flex-direction': 'column',
+                  'display': 'flex',
+                  'gap': '10px',
+                  'flex': '1 0 0',
+                  'align-self': 'stretch',
+                  
+                }">
+                    Life seasons open have. Air have of. Lights fill after let third darkness replenish have of.
+                    Lights fill af....
+                </p>
+                <ng-template pTemplate="footer">
+                    <div [style]="{
+                    'display':'flex','align-self':'stretch','padding':'10px','align-items':'center','flex':'1 0 0','gap':'16px'
+                }">
+                <p-button label="Software" [style]="{
+                    'font-size':'16px','font-family':'Poppins','font-weight':'500','color':'#35353A',
+                    'background':' #00000'
+                }"></p-button>
+                        <p-button label="Open" [style]="{'border-radius':'50px' ,'border':'1px solid #72CA6B',
+                    'background':' #F7FFF6','color':'#72CA6B',
+                    'font-size':'14px','font-family':'Inter','font-weight':'500','line-height':'16px',
+                    'display':'flex','height':'23px','padding':'2px 8px','align-items':'center','gap':'4px'
+                }"></p-button>
+                        <p-button label="Low"
+                            [style]="{
+                    'border-radius':'50px' ,'border':'1px solid #FFD366',
+                    'background':' #FFF6DF','color':'#D6A120',
+                    'font-size':'14px','font-family':'Inter','font-weight':'500','line-height':'16px',
+                    'display':'flex','width':'62px','height':'23px','justify-content':'center','padding':'2px 8px','align-items':'center','gap':'4px'}">
+                        </p-button>
+                        <p-button label="#EE234" [style]="{'border-radius':'50px' ,'border':'1px solid #93A1EB',
+                    'background':' #DEE4FF','color':'#576EE7',
+                    'font-size':'14px','font-family':'Inter','font-weight':'500','line-height':'16px',
+                    'display':'flex','height':'23px','padding':'2px 8px','align-items':'center','gap':'4px'
+                }"></p-button>
+                    </div>
+                    
+                </ng-template>
+            </p-card> -->
+        </div>
+    </div>
+    <!-- <div class="card">
     <h5>Float Label</h5>
     <p>All input text components support floating labels by adding (<mark>.p-float-label</mark>) to wrapper class.</p>
     <div class="grid p-fluid mt-3">
@@ -83,4 +392,4 @@
             </span>
         </div>
     </div>
-</div>
+</div> -->

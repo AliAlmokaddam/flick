@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,Validators } from '@angular/forms';
 import { FormLayoutDemoComponent } from './formlayoutdemo.component';
 import { FormLayoutDemoRoutingModule } from './formlayoutdemo-routing.module';
 import { AutoCompleteModule } from "primeng/autocomplete";
@@ -13,6 +13,9 @@ import { CascadeSelectModule } from "primeng/cascadeselect";
 import { MultiSelectModule } from "primeng/multiselect";
 import { InputTextareaModule } from "primeng/inputtextarea";
 import { InputTextModule } from "primeng/inputtext";
+import { ReactiveFormsModule } from '@angular/forms';
+
+
 
 @NgModule({
 	imports: [
@@ -28,7 +31,9 @@ import { InputTextModule } from "primeng/inputtext";
 		CascadeSelectModule,
 		MultiSelectModule,
 		InputTextareaModule,
-		InputTextModule
+		InputTextModule,
+		ReactiveFormsModule
+		
 	],
 	declarations: [FormLayoutDemoComponent]
 })
